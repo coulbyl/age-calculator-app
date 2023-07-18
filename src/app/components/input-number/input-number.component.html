@@ -1,0 +1,12 @@
+<div class="field-group">
+  <label [for]="label" [class.error]="error">{{ label }}</label>
+  <input
+    [id]="label"
+    [placeholder]="placeholder"
+    class="no-increment-button"
+    [class.input-error]="error"
+    [value]="value"
+    (input)="updateValue($event.target)"
+  />
+  <span class="error" *ngIf="errorMessage">{{ errorMessage }}</span>
+</div>

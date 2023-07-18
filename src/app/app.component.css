@@ -1,0 +1,113 @@
+.main-container {
+  width: 90%;
+  margin: 0 auto;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.form-container {
+  background-color: hsl(0, 0%, 100%);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 130px;
+  padding: 2rem 2rem;
+  max-width: 40rem;
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  box-shadow: 1px 12px 49px -29px rgba(0, 0, 0, 0.75);
+}
+
+.divider {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.divider .logo img {
+  width: 1.5rem;
+  height: auto;
+}
+
+.divider .logo {
+  background-color: hsl(259, 100%, 65%);
+  padding: 1rem 1rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.divider .logo:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.divider .bar {
+  width: 100%;
+  height: 2px;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.divider .right-bar {
+  display: none;
+}
+
+#inputs {
+  display: flex;
+  max-width: 85%;
+}
+
+.field-group {
+  max-width: 10rem;
+  margin-right: 2.5rem;
+}
+
+input {
+  font-size: 20px;
+  width: 100%;
+  padding: 12px 12px;
+  font-weight: 700;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 4px;
+}
+
+label {
+  font-size: 12px;
+}
+
+.result-item,
+.mask {
+  display: flex;
+  align-items: center;
+}
+
+.mask span {
+  background-color: hsl(259, 100%, 65%);
+  height: 10px;
+  width: 30px;
+  display: block;
+  margin-right: 1rem;
+}
+
+#results .label {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: 'Poppins ExtraBold', sans-serif !important;
+}
+
+.number {
+  font-size: 52px;
+  color: hsl(259, 100%, 65%);
+  font-weight: 700;
+  font-family: 'Poppins ExtraBold', sans-serif !important;
+  margin-right: 0.2rem;
+}

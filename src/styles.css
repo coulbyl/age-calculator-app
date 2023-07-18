@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins ExtraBold';
+  src: url('/assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Poppins-Regular', sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 2rem 2rem;
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 94%);
+  overflow: hidden;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.no-increment-button::-webkit-inner-spin-button,
+.no-increment-button::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-increment-button {
+  -moz-appearance: textfield;
+}
+
+label,
+input {
+  display: block;
+  font-family: 'Poppins-ExtraBold', sans-serif;
+}
+
+label {
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: hsl(0, 1%, 44%);
+}
+
+input:focus {
+  outline-color: hsl(228, 45%, 44%);
+  outline-style: solid;
+  outline-width: 0.1px;
+  caret-color: hsl(228, 45%, 44%);
+}
+
+.error {
+  color: hsl(0, 100%, 67%);
+  font-size: 12px;
+}
+
+.input-error {
+  border: 1px solid hsl(0, 100%, 67%) !important;
+}
+
+.input-error:focus {
+  outline-width: 0px;
+}

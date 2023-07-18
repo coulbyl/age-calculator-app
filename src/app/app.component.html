@@ -1,0 +1,99 @@
+<div class="main-container">
+  <div class="sub-container">
+    <div class="form-container">
+      <form [formGroup]="form">
+        <div id="inputs">
+          <app-input-number
+            placeholder="DD"
+            formControlName="day"
+            label="DAY"
+            [error]="
+              hasError('day', 'required') || hasError('day', 'invalidDay')
+            "
+            [errorMessage]="getErrorMessage('day', 'invalidDay')"
+          ></app-input-number>
+
+          <app-input-number
+            placeholder="MM"
+            formControlName="month"
+            label="MONTH"
+            [error]="
+              hasError('month', 'required') || hasError('month', 'invalidMonth')
+            "
+            [errorMessage]="getErrorMessage('month', 'invalidMonth')"
+          ></app-input-number>
+
+          <app-input-number
+            placeholder="YYYY"
+            formControlName="year"
+            label="YEAR"
+            [error]="
+              hasError('year', 'required') ||
+              hasError('year', 'futureDate') ||
+              hasError('year', 'invalidYear')
+            "
+            [errorMessage]="
+              getErrorMessage('year', 'invalidYear') ??
+              getErrorMessage('year', 'futureDate')
+            "
+          ></app-input-number>
+        </div>
+      </form>
+
+      <div class="divider">
+        <div class="bar left-bar"></div>
+        <div class="logo" (click)="onCalculate()">
+          <img
+            src="/assets/images/icon-arrow.svg"
+            width="46"
+            height="44"
+            alt=""
+          />
+        </div>
+        <div class="right-bar bar"></div>
+      </div>
+
+      <div id="results">
+        <div class="result-item">
+          <div class="mask" *ngIf="!hasResult; else years">
+            <span></span>
+            <span></span>
+          </div>
+          <ng-template #years>
+            <span class="number">{{ age.years }}</span>
+          </ng-template>
+          <span class="label">years</span>
+        </div>
+        <div class="result-item">
+          <div class="mask" *ngIf="!hasResult; else months">
+            <span></span>
+            <span></span>
+          </div>
+          <ng-template #months>
+            <span class="number">{{ age.months }}</span>
+          </ng-template>
+          <span class="label">months</span>
+        </div>
+        <div class="result-item">
+          <div class="mask" *ngIf="!hasResult; else days">
+            <span></span>
+            <span></span>
+          </div>
+          <ng-template #days>
+            <span class="number">{{ age.days }}</span>
+          </ng-template>
+          <span class="label">days</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="attribution">
+  Challenge by
+  <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+    >Frontend Mentor</a
+  >. Coded by
+  <a href="https://github.com/coulbyl" target="_blank"
+    >Fannan Luc Coulibaly - aka coulbyl</a
+  >.
+</div>

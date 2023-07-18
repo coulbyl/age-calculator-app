@@ -1,0 +1,23 @@
+@media only screen and (max-width: 768px) {
+  .divider {
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .divider .right-bar {
+    display: block !important;
+  }
+
+  .divider .logo {
+    margin-right: 0 !important;
+  }
+
+  .sub-container {
+    box-shadow: none !important;
+  }
+
+  #inputs {
+    max-width: 100% !important;
+  }
+}
